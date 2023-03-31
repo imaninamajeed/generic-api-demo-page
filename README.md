@@ -5,5 +5,4 @@ This is a traffic offence detector software such as illegal uturn or illegal par
 
 ## Architecture
 
-The architecture overview is here.
-
+The architecture overview is [here](./docs/ARCHITECTURE.md).
