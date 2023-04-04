@@ -58,12 +58,20 @@ export const MyLogin = () => {
           minHeight: "100vh",
           alignItems: "center",
           justifyContent: "flex-start",
-        //   background: "url(https://source.unsplash.com/random/1600x900)",
+          background: "#ffaf74",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
       >
-        <Card sx={{ minWidth: 300, marginTop: "6em" }}>
+        <Card
+          sx={{
+            minWidth: 350,
+            marginTop: "6em",
+            border: 3,
+            borderColor: "text.secondary",
+            borderRadius: "16px",
+          }}
+        >
           <Box
             sx={{
               margin: "1em",
@@ -71,19 +79,7 @@ export const MyLogin = () => {
               justifyContent: "center",
             }}
           >
-            <Avatar sx={{ bgcolor: "secondary.main" }}>
-              <LockIcon />
-            </Avatar>
-          </Box>
-          <Box
-            sx={{
-              marginTop: "1em",
-              display: "flex",
-              justifyContent: "center",
-              color: (theme) => theme.palette.grey[500],
-            }}
-          >
-            Hint: demo / demo
+            <img src="recocloud.png" alt="RecoCloud Logo" width="300" />
           </Box>
           <Box sx={{ padding: "0 1em 1em 1em" }}>
             <Box sx={{ marginTop: "1em" }}>
@@ -111,7 +107,7 @@ export const MyLogin = () => {
             <Button
               variant="contained"
               type="submit"
-              color="primary"
+              color="warning"
               disabled={loading}
               fullWidth
             >
