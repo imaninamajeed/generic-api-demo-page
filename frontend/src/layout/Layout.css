@@ -1,0 +1,11 @@
+span {
+  font-family: "Nunito";
+  font-weight: bolder;
+  font-size: 14px;
+}
+
+input[type="text"] {
+  font-family: "Nunito";
+  font-size: 14px;
+  font-weight: bolder;
+}
