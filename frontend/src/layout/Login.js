@@ -1,15 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
-
-import {
-  Avatar,
-  Button,
-  Card,
-  CardActions,
-  CircularProgress,
-} from "@mui/material";
-import LockIcon from "@mui/icons-material/Lock";
+import { Button, Card, CardActions, CircularProgress } from "@mui/material";
 import {
   Form,
   required,
@@ -17,9 +9,10 @@ import {
   useTranslate,
   useLogin,
   useNotify,
+  warning,
 } from "react-admin";
-
 import Box from "@mui/material/Box";
+import "./Layout.css";
 
 export const MyLogin = () => {
   const [loading, setLoading] = useState(false);
