@@ -6,10 +6,9 @@ import { Route } from "react-router";
 // import authProvider from './authProvider';
 import { MyLayout } from "./layout/Layout";
 import { MyLogin } from "./layout/Login";
-
 import dataProvider from "./api/dataProvider";
-
 import { ModelList } from "./resources/ModelList";
+import "@fontsource/nunito"; // Defaults to weight 400.
 
 // import { Login, Layout } from "./layout/Layout";
 // import { Dashboard } from './dashboard';
