@@ -18,8 +18,6 @@ import {
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 
-import Logo from "./Logo";
-
 const ConfigurationMenu = React.forwardRef((props, ref) => {
   const translate = useTranslate();
   const { onClose } = useUserMenu();
