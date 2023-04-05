@@ -1,0 +1,19 @@
+div {
+  color: black;
+}
+
+div.dashboard-page {
+  background-color: black;
+}
+
+h2.dashboard-title {
+  font-family: "Poppins";
+  font-weight: bolder;
+  text-align: center;
+  line-height: 1.5;
+}
+
+a.menu-primary-text {
+  font-family: "Nunito";
+  font-weight: 900;
+}
