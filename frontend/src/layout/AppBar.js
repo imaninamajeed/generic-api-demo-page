@@ -17,6 +17,7 @@ import {
   // Theme,
 } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
+import Logo from "./Logo";
 
 const ConfigurationMenu = React.forwardRef((props, ref) => {
   const translate = useTranslate();
@@ -49,8 +50,8 @@ const CustomAppBar = () => {
 //   const isLargeEnough =
 //     useMediaQuery < Theme > ((theme) => theme.breakpoints.up("sm"));
   return (
-    <AppBar color="secondary" elevation={1} userMenu={<CustomUserMenu />}>
-      <TitlePortal />
+      <Logo width="100px" height="50px" />
+      <Box component="span" flex={1} />
       {/* {isLargeEnough && <Logo />}
       {isLargeEnough && <Box component="span" sx={{ flex: 1 }} />} */}
     </AppBar>
