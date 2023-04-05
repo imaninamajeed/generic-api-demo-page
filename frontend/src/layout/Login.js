@@ -13,6 +13,7 @@ import {
 } from "react-admin";
 import Box from "@mui/material/Box";
 import "./Layout.css";
+import Logo from "./Logo";
 
 export const MyLogin = () => {
   const [loading, setLoading] = useState(false);
@@ -58,7 +59,8 @@ export const MyLogin = () => {
           minHeight: "100vh",
           alignItems: "center",
           justifyContent: "flex-start",
-          background: "#ffaf74",
+          // background: "warning.main",
+          // borderColor:"#feefe2",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -79,7 +81,7 @@ export const MyLogin = () => {
               justifyContent: "center",
             }}
           >
-            <img src="recocloud.png" alt="RecoCloud Logo" width="300" />
+            <Logo width="300px" />
           </Box>
           <Box sx={{ padding: "0 1em 1em 1em" }}>
             <Box sx={{ marginTop: "1em" }}>
@@ -110,6 +112,7 @@ export const MyLogin = () => {
               color="warning"
               disabled={loading}
               fullWidth
+              className="btn-layout-sign-in"
             >
               {loading && <CircularProgress size={25} thickness={2} />}
               {translate("ra.auth.sign_in")}
