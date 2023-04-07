@@ -1,13 +1,15 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import { Admin, CustomRoutes, Resource } from "react-admin";
-import polyglotI18nProvider from "ra-i18n-polyglot";
-import { Route } from "react-router";
-
-// import authProvider from './authProvider';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import mqtt from "mqtt/dist/mqtt";
 import { MyLayout } from "./layout/Layout";
 import { MyLogin } from "./layout/Login";
+import { MyDashboard } from "./dashboard/Dashboard";
+
+// import authProvider from './authProvider';
 import dataProvider from "./api/dataProvider";
 import { ModelList } from "./resources/ModelList";
+
 import "@fontsource/nunito"; // Defaults to weight 400.
 
 // import { Login, Layout } from "./layout/Layout";
