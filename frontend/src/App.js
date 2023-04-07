@@ -11,44 +11,37 @@ import dataProvider from "./api/dataProvider";
 import { ModelList } from "./resources/ModelList";
 
 import "@fontsource/nunito"; // Defaults to weight 400.
-
-// import { Login, Layout } from "./layout/Layout";
-// import { Dashboard } from './dashboard';
+import "@fontsource/poppins"; // Defaults to weight 400.
 // import { lightTheme } from "./layout/themes";
 
 const ffmpegIP = "172.17.11.62";
 console.log("ffmpegIP:", ffmpegIP, "connected");
 
 const App = () => (
-  <Admin
-    title="Admin"
-    dataProvider={dataProvider}
-    // dataProvider={dataProviderFactory(
-    //   process.env.REACT_APP_DATA_PROVIDER || ""
-    // )}
-    // authProvider={authProvider}
-    // dashboard={Dashboard}
-    loginPage={MyLogin}
-    layout={MyLayout}
-    disableTelemetry
-    // theme={lightTheme}
-  >
-    <Resource
-      name="model_list"
-      options={{ label: "Models" }}
-      list={ModelList}
-    />
-    {/* <CustomRoutes>
-      <Route path="/configuration" element={<Configuration />} />
-      <Route path="/segments" element={<Segments />} />
-    </CustomRoutes> */}
-    {/* <Resource name="customers" {...visitors} />
-    <Resource name="commands" {...orders} options={{ label: "Orders" }} />
-    <Resource name="invoices" {...invoices} />
-    <Resource name="products" {...products} />
-    <Resource name="categories" {...categories} />
-    <Resource name="reviews" {...reviews} /> */}
-  </Admin>
+  <BrowserRouter>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Admin
+            title="Traffic Offence"
+            dataProvider={dataProvider}
+            dashboard={() => <MyDashboard ffmpegIP={ffmpegIP} />}
+            loginPage={MyLogin}
+            layout={MyLayout}
+            disableTelemetry
+          >
+            <Resource
+              name="model_list"
+              options={{ label: "Models" }}
+              list={ModelList}
+            />
+          </Admin>
+        }
+      />
+      <Route path="/login" element={<MyLogin />} />
+    </Routes>
+  </BrowserRouter>
 );
 
 export default App;
