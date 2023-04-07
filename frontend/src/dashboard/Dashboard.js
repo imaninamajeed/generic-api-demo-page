@@ -6,7 +6,7 @@ import DashboardTitle from "./DashboardTitle";
 
 import "./Dashboard.css";
 
-import PendingOrders from "./livestream/LiveStream";
+import LiveStream from "./livestream/LiveStream";
 
 const styles = {
   flex: { display: "flex" },
