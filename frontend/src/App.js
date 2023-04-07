@@ -16,15 +16,8 @@ import "@fontsource/nunito"; // Defaults to weight 400.
 // import { Dashboard } from './dashboard';
 // import { lightTheme } from "./layout/themes";
 
-// import visitors from "./visitors";
-// import orders from "./orders";
-// import products from "./products";
-// import invoices from "./invoices";
-// import categories from "./categories";
-// import reviews from "./reviews";
-// import dataProviderFactory from "./dataProvider";
-// import Configuration from "./configuration/Configuration";
-// import Segments from "./segments/Segments";
+const ffmpegIP = "172.17.11.62";
+console.log("ffmpegIP:", ffmpegIP, "connected");
 
 const App = () => (
   <Admin
