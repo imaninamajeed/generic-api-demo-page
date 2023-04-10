@@ -1,7 +1,7 @@
 // import libraries
 import {Card, Typography } from "@mui/material";
 
-const DashboardTitle = () => {
+export const DashboardTitle = () => {
 
   return (
     <Card
@@ -17,4 +17,3 @@ const DashboardTitle = () => {
   );
 };
 
-export default DashboardTitle;
