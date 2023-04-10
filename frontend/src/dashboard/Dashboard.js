@@ -10,11 +10,6 @@ import LiveStream from "./livestream/LiveStream";
 // import styling
 import "./Dashboard.css";
 
-import LiveStream from "./livestream/LiveStream";
-
-import { useEffect } from "react";
-import JSMpeg from "@cycjimmy/jsmpeg-player";
-
 const styles = {
   flex: { display: "flex" },
   flexColumn: { display: "flex", flexDirection: "column" },
