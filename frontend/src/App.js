@@ -22,7 +22,6 @@ const App = () => (
         element={
           <Admin
             title="Traffic Offence"
-            dataProvider={dataProvider}
             dashboard={() => <MyDashboard ffmpegIP={ffmpegIP} />}
             loginPage={MyLogin}
             layout={MyLayout}
