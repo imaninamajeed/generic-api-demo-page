@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { MyLogin } from "./layout/Login";
 import { MyDashboard } from "./dashboard/Dashboard";
 
-// import layout
+// import styling
 import { MyLayout } from "./layout/Layout";
 import "@fontsource/nunito"; // Defaults to weight 400.
 import "@fontsource/poppins"; // Defaults to weight 400.
