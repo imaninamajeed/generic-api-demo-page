@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "node backend-stream.js"
+  },
+  "dependencies": {
+    "node-rtsp-stream": "^0.0.9"
+  }
+}
