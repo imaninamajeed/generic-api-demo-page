@@ -27,11 +27,7 @@ const App = () => (
             layout={MyLayout}
             disableTelemetry
           >
-            <Resource
-              name="model_list"
-              options={{ label: "Models" }}
-              list={ModelList}
-            />
+            <Resource name="model_list" options={{ label: "Models" }} />
           </Admin>
         }
       />
