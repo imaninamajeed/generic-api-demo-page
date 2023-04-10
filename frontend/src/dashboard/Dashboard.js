@@ -21,7 +21,7 @@ const styles = {
 // const Spacer = () => <span style={{ width: "1em" }} />;
 const VerticalSpacer = () => <span style={{ height: "1em" }} />;
 
-export const MyDashboard = () => {
+export const MyDashboard = (props) => {
   const isXSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("lg"));
 
@@ -49,6 +49,15 @@ export const MyDashboard = () => {
     <div>
       <div style={styles.flexColumn}>
         <DashboardTitle />
+        <VerticalSpacer />
+        <button
+          className="button-refresh"
+          style={{ position: "relative", top: "40px", left: "15px" }}
+          onClick={reinitStream}
+        >
+          Refresh Stream
+        </button>
+        <LiveStream />
       </div>
     </div>
   ) : isSmall ? (
@@ -56,36 +65,37 @@ export const MyDashboard = () => {
       <div style={styles.singleCol}>
         <DashboardTitle />
       </div>
-      {/* <div style={styles.flex}>
-        <MonthlyRevenue value={revenue} />
-        <Spacer />
-        <NbNewOrders value={nbNewOrders} />
+      <div>
+        <button
+          className="button-refresh"
+          style={{ position: "relative", top: "40px", left: "15px" }}
+          onClick={reinitStream}
+        >
+          Refresh Stream
+        </button>
+        <LiveStream />
       </div>
-      <div style={styles.singleCol}>
-        <OrderChart orders={recentOrders} />
-      </div>
-      <div style={styles.singleCol}>
-        <PendingOrders orders={pendingOrders} />
-      </div> */}
     </div>
   ) : (
     <>
-      {/* <div style={{ backgroundColor: "#ffaf74" }}> */}
       <DashboardTitle />
       <div style={styles.flex}>
         <div style={styles.leftCol}>
-          <div style={styles.flex}>
-            <PendingOrders />
+          <div>
+            <button
+              className="button-refresh"
+              style={{ position: "relative", top: "40px", left: "15px" }}
+              onClick={reinitStream}
+            >
+              Refresh Stream
+            </button>
+            <LiveStream />
           </div>
         </div>
         <div style={styles.rightCol}>
-          <div style={styles.flex}>
-            <PendingOrders />
-          </div>
+          <div style={styles.flex}></div>
         </div>
       </div>
     </>
   );
 };
-
-export default MyDashboard;
