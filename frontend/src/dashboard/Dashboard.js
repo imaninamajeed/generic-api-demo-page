@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import JSMpeg from "@cycjimmy/jsmpeg-player";
 
 // import components
-import DashboardTitle from "./DashboardTitle";
+import { DashboardTitle } from "./DashboardTitle";
 import LiveStream from "./livestream/LiveStream";
 
 // import styling
