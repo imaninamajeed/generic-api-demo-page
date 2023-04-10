@@ -1,8 +1,13 @@
-import React from "react";
+// import libraries
 import { useMediaQuery } from "@mui/material";
+import { useEffect } from "react";
+import JSMpeg from "@cycjimmy/jsmpeg-player";
 
+// import components
 import DashboardTitle from "./DashboardTitle";
+import LiveStream from "./livestream/LiveStream";
 
+// import styling
 import "./Dashboard.css";
 
 import LiveStream from "./livestream/LiveStream";
