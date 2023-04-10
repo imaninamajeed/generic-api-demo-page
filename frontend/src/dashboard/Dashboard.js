@@ -24,7 +24,26 @@ const VerticalSpacer = () => <span style={{ height: "1em" }} />;
 export const MyDashboard = () => {
   const isXSmall = useMediaQuery((theme) => theme.breakpoints.down("sm"));
   const isSmall = useMediaQuery((theme) => theme.breakpoints.down("lg"));
-  const aMonthAgo = useMemo(() => subDays(startOfDay(new Date()), 30), []);
+
+  let ffmpegIP = props.ffmpegIP;
+  let videoUrl = `ws://${ffmpegIP}:6789/`;
+  let player;
+
+  function reinitStream() {
+    try {
+      player.destroy();
+    } catch (error) {
+      console.log(error);
+    }
+
+    player = new JSMpeg.VideoElement("#cvsVideo", videoUrl, {
+      autoplay: true,
+    });
+    console.log("player", player);
+  }
+  useEffect(() => {
+    reinitStream();
+  }, []);
 
   return isXSmall ? (
     <div>
