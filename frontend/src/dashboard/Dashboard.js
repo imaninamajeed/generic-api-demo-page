@@ -5,7 +5,7 @@ import JSMpeg from "@cycjimmy/jsmpeg-player";
 
 // import components
 import { DashboardTitle } from "./DashboardTitle";
-import LiveStream from "./livestream/LiveStream";
+import { LiveStream } from "./livestream/LiveStream";
 
 // import styling
 import "./Dashboard.css";
