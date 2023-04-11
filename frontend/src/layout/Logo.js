@@ -1,8 +1,6 @@
-import React from "react";
+// import libraries
 import logo from "./recocloud.png";
 
-function Logo({ width, height }) {
+export const MyLogo = ({ width, height }) => {
   return <img src={logo} alt="Logo" style={{ width, height }} />;
-}
-
-export default Logo;
+};
