@@ -49,9 +49,13 @@ export const TestModel = (props) => {
     formData.append('image', file);
     console.log("Send image");
 
-    const response = await fetch('http://localhost:5000/test/send_file', {
+    // const response = await fetch("http://172.17.10.83:18183/pvbd/predict", {
+    const response = await fetch("http://localhost:5000/test/send_binary", {
       method: 'POST',
-      body: formData,
+      body: file,
+      headers: {
+        "Content-Type": "image/png"
+      },
     });
     console.log("response", response);
 
