@@ -5,37 +5,17 @@ import { Box } from "@mui/material";
 // import component
 import { MyLogo } from "./Logo";
 
-  return (
-    <MenuItem
-      component={Link}
-      // @ts-ignore
-      ref={ref}
-      {...props}
-      to="/configuration"
-      onClick={onClose}
-    >
-      <ListItemIcon>
-        <SettingsIcon fontSize="small" />
-      </ListItemIcon>
-      <ListItemText>{translate("pos.configuration")}</ListItemText>
-    </MenuItem>
-  );
-});
-const CustomUserMenu = () => (
+const MyUserMenu = () => (
   <UserMenu>
-    <ConfigurationMenu />
     <Logout />
   </UserMenu>
 );
 
 export const MyAppBar = () => {
   return (
-    <AppBar color="" elevation={1} userMenu={<CustomUserMenu />}>
-      {/* <TitlePortal /> */}
-      <Logo width="100px" height="50px" />
+    <AppBar color="" elevation={1} userMenu={<MyUserMenu />}>
+      <MyLogo width="100px" height="50px" />
       <Box component="span" flex={1} />
-      {/* {isLargeEnough && <Logo />}
-      {isLargeEnough && <Box component="span" sx={{ flex: 1 }} />} */}
     </AppBar>
   );
 };
