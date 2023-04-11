@@ -4,8 +4,8 @@ import { useEffect } from "react";
 import JSMpeg from "@cycjimmy/jsmpeg-player";
 
 // import components
-import { DashboardTitle } from "./DashboardTitle";
-import { LiveStream } from "./livestream/LiveStream";
+import { MyDashboardTitle } from "./DashboardTitle";
+import { MyLiveStream } from "./livestream/LiveStream";
 
 // import styling
 import "./Dashboard.css";
@@ -48,7 +48,7 @@ export const MyDashboard = (props) => {
   return isXSmall ? (
     <div>
       <div style={styles.flexColumn}>
-        <DashboardTitle />
+        <MyDashboardTitle />
         <VerticalSpacer />
         <button
           className="button-refresh"
@@ -57,13 +57,13 @@ export const MyDashboard = (props) => {
         >
           Refresh Stream
         </button>
-        <LiveStream />
+        <MyLiveStream />
       </div>
     </div>
   ) : isSmall ? (
     <div style={styles.flexColumn}>
       <div style={styles.singleCol}>
-        <DashboardTitle />
+        <MyDashboardTitle />
       </div>
       <div>
         <button
@@ -73,12 +73,12 @@ export const MyDashboard = (props) => {
         >
           Refresh Stream
         </button>
-        <LiveStream />
+        <MyLiveStream />
       </div>
     </div>
   ) : (
     <>
-      <DashboardTitle />
+      <MyDashboardTitle />
       <div style={styles.flex}>
         <div style={styles.leftCol}>
           <div>
@@ -89,7 +89,7 @@ export const MyDashboard = (props) => {
             >
               Refresh Stream
             </button>
-            <LiveStream />
+            <MyLiveStream />
           </div>
         </div>
         <div style={styles.rightCol}>
