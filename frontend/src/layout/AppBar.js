@@ -2,9 +2,8 @@
 import { AppBar, Logout, UserMenu } from "react-admin";
 import { Box } from "@mui/material";
 
-const ConfigurationMenu = React.forwardRef((props, ref) => {
-  const translate = useTranslate();
-  const { onClose } = useUserMenu();
+// import component
+import { MyLogo } from "./Logo";
 
   return (
     <MenuItem
