@@ -1,5 +1,4 @@
-import * as React from "react";
-import { ReactElement, ReactNode } from "react";
+//import libraries
 import {
   List,
   MenuItem,
@@ -9,7 +8,7 @@ import {
   Tooltip,
 } from "@mui/material";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { useTranslate, useSidebarState } from "react-admin";
+import { useSidebarState } from "react-admin";
 
 const SubMenu = (props) => {
   const { handleToggle, isOpen, name, icon, children, dense } = props;
