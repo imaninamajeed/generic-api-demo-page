@@ -8,6 +8,7 @@ import { FileUploader } from "react-drag-drop-files";
 import { TestModelTitle } from "./Title";
 import "./TestModel.css";
 
+// variable definition
 const styles = {
   flex: { display: "flex" },
   flexColumn: { display: "flex", flexDirection: "column" },
@@ -16,36 +17,18 @@ const styles = {
   singleCol: { marginTop: "1em", marginBottom: "1em" },
 };
 
-// const RECO_MODEL_API_SERVER = "172.17.10.83:18183";
-const RECO_MODEL_API_SERVER = "localhost:18183";
-
 export const TestModel = (props) => {
 
+  // variable definition
+  // const RECO_MODEL_API_SERVER = "172.17.10.83:18183";
+  const RECO_MODEL_API_SERVER = "localhost:18183";
   const fileTypes = ["JPG", "PNG"];
-
-  const [droppedFiles, setDroppedFiles] = useState([]);
-  const handleDrop = async (item) => {
-    console.log("handleDrop");
-    const formData = new FormData();
-    formData.append('image', item.files[0]);
-    console.log("Send image");
-
-    const response = await fetch('http://localhost:5000/test/send_file', {
-      method: 'POST',
-      body: formData,
-    });
-
-    if (response.ok) {
-      const url = await response.text();
-      setDroppedFiles([...droppedFiles, url]);
-    }
-  };
-
+  // variable for image proview
   const [previewImage, setPreviewImage] = useState(null);
+
   const handleChange = async (file) => {
     console.log("handleChange");
     console.log("file", file);
-
 
     // Send image
     const formData = new FormData();
