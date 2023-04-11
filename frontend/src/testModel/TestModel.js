@@ -16,6 +16,9 @@ const styles = {
   singleCol: { marginTop: "1em", marginBottom: "1em" },
 };
 
+// const RECO_MODEL_API_SERVER = "172.17.10.83:18183";
+const RECO_MODEL_API_SERVER = "localhost:18183";
+
 export const TestModel = (props) => {
 
   const fileTypes = ["JPG", "PNG"];
@@ -49,14 +52,26 @@ export const TestModel = (props) => {
     formData.append('image', file);
     console.log("Send image");
 
-    // const response = await fetch("http://172.17.10.83:18183/pvbd/predict", {
-    const response = await fetch("http://localhost:5000/test/send_binary", {
+    // const sendUrl = "http://localhost:5000/test/send_binary"
+    const sendUrl = `http://${RECO_MODEL_API_SERVER}/pvbd/predict`
+    console.log("sendUrl", sendUrl);
+
+    // const response = await fetch("http://localhost:5000/test/send_binary", {
+    const response = await fetch(sendUrl, {
       method: 'POST',
       body: file,
       headers: {
         "Content-Type": "image/png"
       },
-    });
+    }).then(async (res) => {
+      // Do something with the response
+      let responseJson = await res.json();
+      console.log("responseJson", responseJson);
+    })
+      .catch((error) => {
+        console.log(error)
+      });
+
     console.log("response", response);
 
     if (response.ok) {
