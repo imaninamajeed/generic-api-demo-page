@@ -10,7 +10,7 @@ import {
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import { useSidebarState } from "react-admin";
 
-const SubMenu = (props) => {
+export const SubMenu = (props) => {
   const { handleToggle, isOpen, name, icon, children, dense } = props;
 
   const [sidebarIsOpen] = useSidebarState();
@@ -53,5 +53,3 @@ const SubMenu = (props) => {
     </div>
   );
 };
-
-export default SubMenu;
