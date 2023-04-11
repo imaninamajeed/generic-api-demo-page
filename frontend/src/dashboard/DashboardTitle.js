@@ -1,7 +1,7 @@
 // import libraries
 import {Card, Typography } from "@mui/material";
 
-export const DashboardTitle = () => {
+export const MyDashboardTitle = () => {
 
   return (
     <Card
