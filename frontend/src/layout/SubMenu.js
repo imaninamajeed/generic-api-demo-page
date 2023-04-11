@@ -12,7 +12,6 @@ import { useSidebarState } from "react-admin";
 
 const SubMenu = (props) => {
   const { handleToggle, isOpen, name, icon, children, dense } = props;
-  const translate = useTranslate();
 
   const [sidebarIsOpen] = useSidebarState();
 
@@ -22,7 +21,7 @@ const SubMenu = (props) => {
         {isOpen ? <ExpandMore /> : icon}
       </ListItemIcon>
       <Typography variant="inherit" color="textSecondary">
-        {translate(name)}
+        {name}
       </Typography>
     </MenuItem>
   );
@@ -32,7 +31,7 @@ const SubMenu = (props) => {
       {sidebarIsOpen || isOpen ? (
         header
       ) : (
-        <Tooltip title={translate(name)} placement="right">
+        <Tooltip title={name} placement="right">
           {header}
         </Tooltip>
       )}
