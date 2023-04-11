@@ -1,5 +1,4 @@
-import * as React from "react";
-import { ReactElement, ReactNode } from "react";
+//import libraries
 import {
   List,
   MenuItem,
@@ -9,11 +8,10 @@ import {
   Tooltip,
 } from "@mui/material";
 import ExpandMore from "@mui/icons-material/ExpandMore";
-import { useTranslate, useSidebarState } from "react-admin";
+import { useSidebarState } from "react-admin";
 
-const SubMenu = (props) => {
+export const SubMenu = (props) => {
   const { handleToggle, isOpen, name, icon, children, dense } = props;
-  const translate = useTranslate();
 
   const [sidebarIsOpen] = useSidebarState();
 
@@ -23,7 +21,7 @@ const SubMenu = (props) => {
         {isOpen ? <ExpandMore /> : icon}
       </ListItemIcon>
       <Typography variant="inherit" color="textSecondary">
-        {translate(name)}
+        {name}
       </Typography>
     </MenuItem>
   );
@@ -33,7 +31,7 @@ const SubMenu = (props) => {
       {sidebarIsOpen || isOpen ? (
         header
       ) : (
-        <Tooltip title={translate(name)} placement="right">
+        <Tooltip title={name} placement="right">
           {header}
         </Tooltip>
       )}
@@ -55,5 +53,3 @@ const SubMenu = (props) => {
     </div>
   );
 };
-
-export default SubMenu;
