@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import components
 import { MyLogin } from "./layout/Login";
 import { MyDashboard } from "./dashboard/Dashboard";
+import { TestModel } from "./testModel/TestModel";
 
 // import styling
 import { MyLayout } from "./layout/Layout";
@@ -23,8 +24,8 @@ export default function App() {
           path="/"
           element={
             <Admin
-              title="Traffic Offence"
-              dashboard={() => <MyDashboard ffmpegIP={ffmpegIP} />}
+              title="Test Model"
+              dashboard={() => <TestModel />}
               loginPage={MyLogin}
               layout={MyLayout}
               disableTelemetry
