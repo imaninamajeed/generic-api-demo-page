@@ -46,9 +46,7 @@ const CustomUserMenu = () => (
   </UserMenu>
 );
 
-const CustomAppBar = () => {
-//   const isLargeEnough =
-//     useMediaQuery < Theme > ((theme) => theme.breakpoints.up("sm"));
+export const MyAppBar = () => {
   return (
     <AppBar color="" elevation={1} userMenu={<CustomUserMenu />}>
       {/* <TitlePortal /> */}
@@ -59,5 +57,3 @@ const CustomAppBar = () => {
     </AppBar>
   );
 };
-
-export default CustomAppBar;
