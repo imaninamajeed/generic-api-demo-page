@@ -1,7 +1,6 @@
-import * as React from "react";
-import { useState } from "react";
+// import libraries
 import Box from "@mui/material/Box";
-import LabelIcon from "@mui/icons-material/Label";
+import { DashboardMenuItem, useSidebarState } from "react-admin";
 
 import {
   useTranslate,
