@@ -1,7 +1,7 @@
 // import libraries
 import { Card, CardContent } from "@mui/material";
 
-export const LiveStream = () => {
+export const MyLiveStream = () => {
   return (
     <Card sx={{ flex: 1 }}>
       <CardContent title={"livestream"}>
