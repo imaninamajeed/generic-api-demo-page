@@ -1,23 +1,22 @@
-import React, { useState } from "react";
+// import libraries
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
-import { Button, Card, CardActions, CircularProgress } from "@mui/material";
+import { Form, required, TextInput, useLogin, useNotify } from "react-admin";
 import {
-  Form,
-  required,
-  TextInput,
-  useTranslate,
-  useLogin,
-  useNotify,
-  warning,
-} from "react-admin";
-import Box from "@mui/material/Box";
+  Button,
+  Card,
+  CardActions,
+  CircularProgress,
+  Box,
+} from "@mui/material";
+
+// import styling
 import "./Layout.css";
-import Logo from "./Logo";
+import { MyLogo } from "./Logo";
 
 export const MyLogin = () => {
   const [loading, setLoading] = useState(false);
-  const translate = useTranslate();
 
   const notify = useNotify();
   const login = useLogin();
@@ -59,8 +58,6 @@ export const MyLogin = () => {
           minHeight: "100vh",
           alignItems: "center",
           justifyContent: "flex-start",
-          // background: "warning.main",
-          // borderColor:"#feefe2",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -81,14 +78,14 @@ export const MyLogin = () => {
               justifyContent: "center",
             }}
           >
-            <Logo width="300px" />
+            <MyLogo width="300px" />
           </Box>
           <Box sx={{ padding: "0 1em 1em 1em" }}>
             <Box sx={{ marginTop: "1em" }}>
               <TextInput
                 autoFocus
                 source="username"
-                label={translate("ra.auth.username")}
+                label={"Username"}
                 disabled={loading}
                 validate={required()}
                 fullWidth
@@ -97,7 +94,7 @@ export const MyLogin = () => {
             <Box sx={{ marginTop: "1em" }}>
               <TextInput
                 source="password"
-                label={translate("ra.auth.password")}
+                label={"Password"}
                 type="password"
                 disabled={loading}
                 validate={required()}
@@ -115,7 +112,7 @@ export const MyLogin = () => {
               className="btn-layout-sign-in"
             >
               {loading && <CircularProgress size={25} thickness={2} />}
-              {translate("ra.auth.sign_in")}
+              {"sign in"}
             </Button>
           </CardActions>
         </Card>
@@ -128,5 +125,3 @@ MyLogin.propTypes = {
   authProvider: PropTypes.func,
   previousRoute: PropTypes.string,
 };
-
-export default MyLogin;
