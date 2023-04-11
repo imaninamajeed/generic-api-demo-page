@@ -1,23 +1,6 @@
-import * as React from "react";
-import {
-  AppBar,
-  TitlePortal,
-  Logout,
-  UserMenu,
-  useTranslate,
-  useUserMenu,
-} from "react-admin";
-import { Link } from "react-router-dom";
-import {
-  Box,
-  MenuItem,
-  ListItemIcon,
-  ListItemText,
-  useMediaQuery,
-  // Theme,
-} from "@mui/material";
-import SettingsIcon from "@mui/icons-material/Settings";
-import Logo from "./Logo";
+// import libraries
+import { AppBar, Logout, UserMenu } from "react-admin";
+import { Box } from "@mui/material";
 
 const ConfigurationMenu = React.forwardRef((props, ref) => {
   const translate = useTranslate();
