@@ -10,5 +10,18 @@
 ./.dev/build-docker.sh
 
 ## Up the docker compose
-docker-compose up -d
+docker-compose -f docker-compose.yml up -d
 ```
+
+## Development
+
+Why we need the following to test?
+In order to resolve the CORS problem. Ofcuz there are several way to resolve it but the following method use the dirtiest way to resolve.
+
+1. Mount the current working environment to the container with the following code:
+
+```sh
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+```
+
+2. Open the webpage at app deploy point. For example `http://localhost:18183/`
