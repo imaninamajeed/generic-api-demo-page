@@ -72,10 +72,8 @@ export const TestModel = (props) => {
 
     console.log("response", response);
 
-    if (response.ok) {
-      const url = await response.text();
-      setPreviewImage(URL.createObjectURL(file));
-    }
+    // Set the preview image
+    setPreviewImage(URL.createObjectURL(file));
   };
 
 
