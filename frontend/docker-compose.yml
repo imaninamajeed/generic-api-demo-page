@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  demoapp1:
+    image: "recocloudapp/recocloud:demo-v0.1.2-9-g3ddbbfd"
+    networks:
+      - net
+    # ports:
+    #   - 18888:3000
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    mem_limit: 1000m
+    logging:
+      options:
+        max-size: "100k"
+        max-file: "500"
+    devices:
+      - /dev/dri:/dev/dri
+    # command: "npm run start"
+    command: "serve -s build"
+    labels:
+      - "traefik.http.routers.demoapp1.rule=Host(`localhost`)"
+      - "traefik.http.routers.demoapp1.rule=PathPrefix(`/`)"
+      - "traefik.http.routers.demoapp1.entrypoints=testapi"
+      # - "traefik.http.middlewares.demoapp1-stripprefix.stripprefix.forceslash=true"
+      # - "traefik.http.middlewares.demoapp1-stripprefix.stripprefix.prefixes=/demoapp1"
+      # - "traefik.http.routers.demoapp1.middlewares=demoapp1-stripprefix"
+      - "traefik.http.services.demoapp1.loadbalancer.server.scheme=http"
+      - "traefik.http.services.demoapp1.loadbalancer.server.port=3000"
+
+networks:
+  net:
