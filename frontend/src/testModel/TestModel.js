@@ -84,13 +84,13 @@ export const TestModel = (props) => {
       <div style={styles.flex}>
         <div style={styles.leftCol}>
           <div>
+            <FileUploader handleChange={handleChange} name="file" types={fileTypes} />
             <CardMedia
               component="img"
-              height="194"
+              height={700}
               image={previewImage}
               alt="Image Preview"
             />
-            <FileUploader handleChange={handleChange} name="file" types={fileTypes} />
 
           </div>
         </div>
