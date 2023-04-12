@@ -22,7 +22,7 @@ export const MyMenu = () => {
       }}
     >
       <DashboardMenuItem
-        primaryText="livestream"
+        primaryText="TestModel"
         className="menu-primary-text"
       />
     </Box>
