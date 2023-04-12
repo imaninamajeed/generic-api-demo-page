@@ -23,7 +23,7 @@ export const TestModel = (props) => {
 
   // variable definition
   // const RECO_MODEL_API_SERVER = "172.17.10.83:18183";
-  const RECO_MODEL_API_SERVER = "localhost:18183";
+  const RECO_MODEL_API_SERVER = window.location.host;
   const fileTypes = ["JPG", "PNG", "JPEG"];
   // variable for image proview
   const [previewImage, setPreviewImage] = useState(null);
