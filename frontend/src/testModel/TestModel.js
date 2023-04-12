@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 // Third Party Import
 import { FileUploader } from "react-drag-drop-files";
-import { Select, FormControl, FormHelperText, InputLabel, MenuItem } from "@mui/material";
+import { Select, FormControl, FormHelperText, InputLabel, MenuItem, CardMedia } from "@mui/material";
 
 // Custom import
 import { TestModelTitle } from "./Title";
@@ -83,7 +83,12 @@ export const TestModel = (props) => {
       <div style={styles.flex}>
         <div style={styles.leftCol}>
           <div>
-            <img style={{ width: "300px", height: "300px" }} src={previewImage} alt="Image Preview" />
+            <CardMedia
+              component="img"
+              height="194"
+              image={previewImage}
+              alt="Image Preview"
+            />
             <FileUploader handleChange={handleChange} name="file" types={fileTypes} />
 
           </div>
