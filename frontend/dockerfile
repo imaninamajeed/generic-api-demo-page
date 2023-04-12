@@ -2,11 +2,13 @@ FROM node:16.15.0-alpine as build
 
 WORKDIR /root
 
-COPY public /root/public/
-COPY src /root/src/
 COPY package-lock.json package.json /root/
 
 RUN npm ci
+
+COPY public /root/public/
+COPY src /root/src/
+
 RUN npm run build
 
 FROM node:16.15.0-alpine as runtime
