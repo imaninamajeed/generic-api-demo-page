@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 // Third Party Import
 import { FileUploader } from "react-drag-drop-files";
-import { Select, FormControl, FormHelperText, InputLabel, MenuItem, CardMedia } from "@mui/material";
+import { Select, FormControl, FormHelperText, InputLabel, MenuItem, CardMedia, CardContent, Typography } from "@mui/material";
 
 // Custom import
 import { TestModelTitle } from "./Title";
@@ -65,6 +65,7 @@ export const TestModel = (props) => {
       // Do something with the response
       let responseJson = await res.json();
       console.log("responseJson", responseJson);
+      document.getElementById("result-card-content").textContent = JSON.stringify(responseJson, undefined, 2);
     })
       .catch((error) => {
         console.log(error)
@@ -116,6 +117,10 @@ export const TestModel = (props) => {
               <FormHelperText>Choose your model</FormHelperText>
             </FormControl>
 
+            <CardContent>
+              {/* <Typography id="result-card-content" variant="body2" color="text.secondary">- None -</Typography> */}
+              <pre id="result-card-content">- None -</pre>
+            </CardContent>
           </div>
         </div>
       </div>
