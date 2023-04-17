@@ -36,7 +36,7 @@ export const TestModel = (props) => {
   const modelMetaList = getModelMetas();
   console.log("modelMetaList", modelMetaList);
 
-  const [selectedModel, setSelectedModel] = React.useState('pvbd');
+  const [selectedModel, setSelectedModel] = React.useState('vlpd');
   const handleModelChange = (event) => {
     setSelectedModel(event.target.value);
   };
@@ -109,7 +109,7 @@ export const TestModel = (props) => {
                 {modelMetaList.map(
                   (modelMeta) => {
                     return (
-                      <MenuItem value={modelMeta.codename} key={modelMeta.codename}>{modelMeta.codename}</MenuItem>
+                      <MenuItem value={modelMeta.codename} key={modelMeta.codename}>{modelMeta.name}</MenuItem>
                     )
                   }
                 )}
