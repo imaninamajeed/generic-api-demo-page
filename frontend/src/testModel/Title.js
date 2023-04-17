@@ -11,7 +11,7 @@ export const TestModelTitle = () => {
       }}
     >
       <Typography variant="h4" component="h2" className="dashboard-title">
-        TestModel
+        Internal Testing Demo App
       </Typography>
     </Card>
   );
