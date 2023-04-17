@@ -1,6 +1,14 @@
 export const modelMetas = [
 	{
-		"name": "Vehicle and license plate detection",
+		"name": "License Plate Detection Recognizer",
+		"techname": "license-plate-detector-recognizer",
+		"codename": "lpdr",
+		"type": "detection",
+		"desc": "Detection model that detects and recognize license plates of vehicles.",
+		"version": "v1.0",
+	},
+	{
+		"name": "Vehicle License Plate Detection",
 		"techname": "vehicle-license-plate-detection-barrier-0106",
 		"codename": "vlpd",
 		"type": "detection",
@@ -15,7 +23,7 @@ export const modelMetas = [
 		}
 	},
 	{
-		"name": "Face detection",
+		"name": "Face Detection for CCTV view",
 		"techname": "face-detection-retail-0004",
 		"codename": "fdr",
 		"type": "detection",
@@ -29,7 +37,7 @@ export const modelMetas = [
 		}
 	},
 	{
-		"name": "Person detection for indoors",
+		"name": "Person Detection for CCTV view",
 		"techname": "person-detection-retail-0013",
 		"codename": "pdr",
 		"type": "detection",
@@ -43,7 +51,7 @@ export const modelMetas = [
 		}
 	},
 	{
-		"name": "Pedestrian detection",
+		"name": "Person Detection for ADAS view",
 		"techname": "pedestrian-detection-adas-0002",
 		"codename": "pda",
 		"type": "detection",
@@ -57,7 +65,7 @@ export const modelMetas = [
 		}
 	},
 	{
-		"name": "Pedestrian and vehicle detection model",
+		"name": "Pedestrian Vehicle Bike Detection",
 		"techname": "person-vehicle-bike-detection-crossroad-0078",
 		"codename": "pvbd",
 		"type": "detection",
@@ -73,7 +81,7 @@ export const modelMetas = [
 		}
 	},
 	{
-		"name": "Segmentation model for ITA and CDA",
+		"name": "Crowd Demographic Analysis",
 		"techname": "semantic-segmentation-adas-0001",
 		"codename": "cda",
 		"type": "classification",
@@ -81,7 +89,7 @@ export const modelMetas = [
 		"version": "v1.0-2020.4"
 	},
 	{
-		"name": "Vehicle attributes model",
+		"name": "Vehicle Attributes Color",
 		"techname": "vehicle-attributes-recognition-barrier-0039",
 		"codename": "varb",
 		"type": "classification",
@@ -106,7 +114,7 @@ export const modelMetas = [
 		}
 	},
 	{
-		"name": "VCS19 Class",
+		"name": "Vehicle Attributes Type",
 		"techname": "vcs19",
 		"codename": "vcs19",
 		"type": "classification",
@@ -137,7 +145,7 @@ export const modelMetas = [
 		}
 	},
 	{
-		"name": "Vehicle make model",
+		"name": "Vehicle Attributes Make Model",
 		"techname": "mobilenet128_vehicleRecognition",
 		"codename": "make-model",
 		"type": "classification",
@@ -5955,7 +5963,7 @@ export const modelMetas = [
 		}
 	},
 	{
-		"name": "Segmentation model for ITA and CDA",
+		"name": "Intelligent Traffic Analysis",
 		"techname": "semantic-segmentation-adas-0001",
 		"codename": "ita",
 		"type": "classification",
