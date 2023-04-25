@@ -50,8 +50,11 @@ export const TestModel = (props) => {
     formData.append('image', file);
     console.log("Send image");
 
+    // Todo: remove the hardcode api gateway server
+    const RECO_MODEL_API_SERVER = "172.17.10.83:18888"
     // const sendUrl = "http://localhost:5000/test/send_binary"
-    const sendUrl = `http://${RECO_MODEL_API_SERVER}/${selectedModel}/predict`
+    // const sendUrl = `http://${RECO_MODEL_API_SERVER}/${selectedModel}/predict`
+    const sendUrl = `http://${RECO_MODEL_API_SERVER}/predict/${selectedModel}`
     console.log("sendUrl", sendUrl);
 
     // const response = await fetch("http://localhost:5000/test/send_binary", {
