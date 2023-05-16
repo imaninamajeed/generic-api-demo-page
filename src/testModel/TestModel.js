@@ -23,7 +23,8 @@ export const TestModel = (props) => {
 
   // variable definition
   // const RECO_MODEL_API_SERVER = "172.17.10.83:18183";
-  const RECO_MODEL_API_SERVER = window.location.host;
+  // const RECO_MODEL_API_SERVER = window.location.host;
+
   const fileTypes = ["JPG", "PNG", "JPEG"];
   // variable for image proview
   const [previewImage, setPreviewImage] = useState(null);
@@ -51,7 +52,7 @@ export const TestModel = (props) => {
     console.log("Send image");
 
     // Todo: remove the hardcode api gateway server
-    const RECO_MODEL_API_SERVER = "172.17.10.83:18888"
+    const RECO_MODEL_API_SERVER = "172.17.0.143:18888"
     // const sendUrl = "http://localhost:5000/test/send_binary"
     // const sendUrl = `http://${RECO_MODEL_API_SERVER}/${selectedModel}/predict`
     const sendUrl = `http://${RECO_MODEL_API_SERVER}/predict/${selectedModel}`
