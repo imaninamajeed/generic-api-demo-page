@@ -5,8 +5,8 @@ services:
     image: "recocloudapp/recocloud:demo-latest"
     networks:
       - net
-    # ports:
-    #   - 18888:3000
+    ports:
+      - 19002:3000
     volumes:
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
