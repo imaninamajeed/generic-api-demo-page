@@ -1,6 +1,6 @@
 stages:
   - release
-  - setup
+  - development
   - deploy
 
 # Cache modules in between jobs
@@ -19,9 +19,9 @@ release:
   only:
     - main
 
-setup_model:
+development_setup:
   image: alpine:latest
-  stage: setup
+  stage: development
   before_script:
   - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )'
   - eval $(ssh-agent -s)
@@ -42,7 +42,7 @@ setup_model:
     git pull;
     ./.dev/auto-deploy.sh;'
 
-deploy_model:
+deployment_setup:
   image: alpine:latest
   stage: deploy
   only:
@@ -53,14 +53,14 @@ deploy_model:
   before_script:
   - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )'
   - eval $(ssh-agent -s)
-  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+  - echo "$DEPLOY_SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
-  - ssh-keyscan $VM_IPADDRESS >> ~/.ssh/known_hosts
+  - ssh-keyscan $DEPLOY_IPADDRESS >> ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
   script:
   - echo "$CI_PROJECT_PATH"
-  - ssh $SSH_USER@$VM_IPADDRESS 'hostname;
+  - ssh $SSH_USER@$DEPLOY_IPADDRESS 'hostname;
     echo $(date);
     echo DST=$HOME/'"'$CI_PROJECT_PATH'"';
     cd $HOME/'"'$CI_PROJECT_PATH'"';
