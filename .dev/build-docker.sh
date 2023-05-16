@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Ref: https://stackoverflow.com/questions/3404936/show-which-git-tag-you-are-on
 
 docker_image_reponame=recocloudapp/recocloud

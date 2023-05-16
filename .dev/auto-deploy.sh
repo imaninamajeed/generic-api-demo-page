@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# set -e
+set -e
 
 echo "WARNING: FOR DEVELOPMENT PURPOSE ONLY! DO NOT USE OR COPY THIS SCRIPT TO PRODUCTION!"
 
