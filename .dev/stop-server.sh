@@ -1,5 +1,5 @@
 #!/bin/bash
 
-set -e
+# set -e
 
 docker-compose -f docker-compose.yml down
